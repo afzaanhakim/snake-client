@@ -13,18 +13,26 @@ const connect = function () {
   // interpret incoming data as text
   conn.setEncoding("utf8");
   conn.on ("connect", () => {
-    console.log("Successfully connected to gme server")
+    console.log("Successfully connected to game server")
+    // conn.write('Move: up');
+    // setInterval((write) => {conn.write('Move: left')}, 
+    // 500);
+  });
+  conn.write("Name: ANH");
     
     
-    });
+ 
+    
 
-  conn.write("Name: ANH")
+
+  console.log("hi")
     
   conn.on('data', (data) => {
     console.log(`Message from server: ${data}`);
     });
 
-  
+
+ 
 
   return conn;
 
