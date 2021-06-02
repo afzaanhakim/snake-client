@@ -3,6 +3,6 @@ const {connect} = require('./client') //-> requiring connect function from clien
 const {setupInput} = require("./input");
 
 console.log("Connecting ...");
-connect();
+;
 
-setupInput();
+setupInput(connect());
